@@ -15,7 +15,7 @@ btnLogin.onclick = function Login(e){
   }
   if (localStorage.getItem(username.value) == json) {
     alert("dang nhap thanh cong");
-    window.location="http://127.0.0.1:5500/upload.html"
+    window.location="/upload.html"
   } else {
     alert("dang nhap that bai");
   }

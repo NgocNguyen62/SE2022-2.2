@@ -11,7 +11,7 @@ http.createServer(function (req, res) {
   //Process the file upload in Node
   form.parse(req, function (error, fields, file) {
     let filepath = file.fileupload.filepath;
-    let newpath = 'C:/Users/Admin/SE/3d/assert/';
+    let newpath = '/assert/';
     newpath += file.fileupload.originalFilename;
 
     //Copy the uploaded file to a custom folder
