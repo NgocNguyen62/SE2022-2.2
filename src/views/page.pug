@@ -1,0 +1,16 @@
+extends  layout 
+block content 
+    div.container
+        form(action= "/present")
+            h1 #{title}
+            h2
+        each model in models 
+            div.models-name(url('/${model.name}'))
+            h3.model-name 
+                | #{model.name}
+            a(href=`/present?id=${model.id}`)
+                | View
+        
+        form(action="/login")
+            h2
+            button upload
