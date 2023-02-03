@@ -5,8 +5,18 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title 3D Player
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js") 
     body 
         main 
             block header 
-                  
+              nav.navbar.navbar-inverse
+                .container-fluid
+                    .navbar-header
+                        a.navbar-brand(href="#") 3D Player
+                        ul.nav.navbar-nav
+                            li.active
+                                a(href="/") Home
+                            li 
+                                a(href="/login") Upload   
             block content 

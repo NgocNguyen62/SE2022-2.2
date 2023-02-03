@@ -10,7 +10,7 @@ login = function(request, response){
                 request.session.loggedin = true;
                 response.redirect('/uploadfile');
             } else {
-                alert("dang nhap that bai");
+                //alert("dang nhap that bai");
 				response.send('Incorrect Username and/or Password!');
 			}	
             response.end();
