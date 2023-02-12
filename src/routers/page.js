@@ -26,12 +26,17 @@ router.get('/present', (req, res) => {
         res.render('present', {models:data}) 
     })
 }) 
+
+router.get('/edit', (req, res) => {
+    res.sendFile('edit.html', {root: "./public/"})
+})
+
 router.get('/uploadfile', (req, res) => {
     res.sendFile('upload.html', {root: "./views/"})
 })
 
 const upload = require('../controllers/upload')
-const cloud = require('../config/cloud')
+
 const uploadController = require("../controllers/uploadfile");
 const { title } = require("process");
 //const upload = require("../controllers/upload")

@@ -1,4 +1,4 @@
-import * as THREE from '/build/three.module.js';
+import * as THREE from './build/three.module.js';
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
 import { GLTFLoader } from './jsm/loaders/GLTFLoader.js'
 import { GUI } from './jsm/libs/dat.gui.module.js';
@@ -90,12 +90,15 @@ const init = () => {
     backLight.add(spotLight3.position, "y", -40, 40, 1);
     backLight.add(spotLight3.position, "z", -40, 40, 1);
 
-    // loding gltf 3d model
+
+    var url = window.location.href;
+    var path = url.substring(url.lastIndexOf('=') + 1);
+    
     const loader = new GLTFLoader();
-    loader.load('./model/scene.glb', (gltf) => {
+    loader.load(path, (gltf) => {
         house = gltf.scene.children[0];
-        house.scale.set(0.4, 0.4, 0.4)
-        house.position.set(0, -1.3, 0)
+        house.scale.set(1, 1, 1)
+        house.position.set(0, -20, 0)
         house.rotation.x = Math.PI / -3
         scene.add(gltf.scene);
     });
@@ -112,7 +115,7 @@ const render = () => {
 let step = 0
 const animate = () => {
     requestAnimationFrame(animate);
-    step += 0.02;
+    step += 0.01;
     house.position.y =  2*Math.abs(Math.sin(step));
     // console.log(2*Math.abs(Math.sin(step)))
     house.rotation.y = Math.sin(step)*(Math.abs(Math.cos(step / 3) / 4));

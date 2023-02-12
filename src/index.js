@@ -11,7 +11,7 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(express.static(path.join(__dirname+ '/public')));
-//app.use(express.static(path.join(__dirname, 'views')));
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.set("view engine", "pug");
@@ -28,7 +28,8 @@ app.get('/upload', function(req, res){
 const model = require("./models");
 model.sequelize.sync();
 app.use('/uploadfile', require("./routers/page"))
-
-
+//app.use('/edit', require("./controllers/edit"))
+app.use('/build/', express.static(path.join(__dirname, 'node_modules/three/build')));
+app.use('/jsm/', express.static(path.join(__dirname, 'node_modules/three/examples/jsm')));
 
 app.listen(PORT);
