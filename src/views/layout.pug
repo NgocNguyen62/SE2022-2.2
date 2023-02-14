@@ -7,6 +7,9 @@ html(lang="en")
         title 3D Player
         link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js") 
+        link(rel="stylesheet", href="/css/page.css")
+        script(type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js")
+        link(rel="stylesheet" href="/css/demo-styles.css")
     body 
         main 
             block header 
@@ -18,5 +21,7 @@ html(lang="en")
                             li.active
                                 a(href="/") Home
                             li 
-                                a(href="/login") Upload   
+                                a(href="/login") Upload
+                             
             block content 
+                

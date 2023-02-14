@@ -1,13 +1,16 @@
-extends  layout 
+extends  layout  
 block content 
     div.container
         .jumboton.text-center 
             h1 #{title}
-        each model in models 
-            div.models-name(url('/${model.name}'))
-            h3.model-name 
-                | #{model.name}
-            a(href=`/present?id=${model.id}`)
-                | View         
-            a(href=`/edit?path=${model.path}`)
-                | Edit
+        ul.list-models
+            each model in models 
+                li
+                    p
+                        model-viewer(src=`${model.path}` shadow-intensity="1" auto-rotate)
+                        h5
+                            | #{model.name}
+                        a(href=`/present?id=${model.id}`)
+                            | View         
+                        a(href=`/edit?path=${model.path}`)
+                            | Edit

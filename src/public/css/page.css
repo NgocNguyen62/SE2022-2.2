@@ -1,0 +1,27 @@
+
+.container.main {
+    margin-top: 50px;
+  }
+.list-models {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+.list-models li {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+.list-models model-viewer {
+    width: 150px;
+    height: 100px;  
+    justify-content: center;
+}
+.upload-file {
+  background-color: #ffffff;
+  width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+

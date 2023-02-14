@@ -5,21 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>upload</title>
+    <link rel="stylesheet" href="/css/page.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-  <form action="/uploadfile" enctype="multipart/form-data" method="POST"> 
-    <input type="file" name="myFile" />
-    <input type="submit" value="Upload a file"/>
- </form>
-    <!-- <script>
-        async function uploadFile() {
-          let formData = new FormData(); 
-          formData.append("fileupload", fileupload.files[0]);
-            await fetch('http://localhost:5500/upFiles', {
-            method: "POST", 
-            body: formData
-          }); 
-        }
-    </script> -->
+  <div class="upload-file">
+    <form action="/uploadfile" enctype="multipart/form-data" method="POST"> 
+      <input type="file" name="myFile" />
+      <input type="submit" value="Upload a file"/>    
+   </form>
+  </div>
+  <div class="decor">
+      <model-viewer src="/assets/RobotExpressive.glb" shadow-intensity="1" autoplay animation-name="Dance"></model-viewer>
+  </div>
 </body>
 </html>

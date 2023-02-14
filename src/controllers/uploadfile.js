@@ -9,7 +9,7 @@ const uploads = async (req, res, next) =>{
     }
     var name = path.basename(file.path)
     var link = path.posix.join("assets", name)
-    res.send("Upload successfully");
+    res.send(`<h1>Upload successfully.</h1> <p>Return home</p> <a href = "/"> home </a>`);
     db.model.create({
       type: file.mimetype,
       name: file.originalname,
