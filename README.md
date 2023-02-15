@@ -31,7 +31,7 @@ Sử dụng Database MySQL để lưu trữ thông tin account (user, password) 
 ### 2.3 Quản trị viên có quyền tải lên file model 3D
 Sau khi đăng nhập thành công, quản trị viên có thể tải lên file model 3D và chỉ có thể tải file định dạng .glb
 Login
-![Alt text](descriptionImg/upload.png)
+![Alt text](descriptionImg/login.png)
 Upload
 ![Alt text](descriptionImg/upload.png)
 
