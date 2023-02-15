@@ -18,9 +18,13 @@ Nằm trong file Report
 - Mô tả hệ thống web trình diễn 3D: Web 3D cho phép người dùng xem ảnh 3D. Quản trị viên sẽ có quyền up file 3D lên trang web để người dùng có thể nhìn thấy
 ### 2.1 Trình diễn model 3D
 Web 3D cho phép người dùng xem ảnh 3D. Dưới mỗi model sẽ có nút view và nút edit. Click vào nút view để xem các model, click vào nút edit để chỉnh độ sáng, thêm màu sắc,...
-
+![Home](descriptionImg/home.png)
+![View](descriptionImg/view.png)
+![Edit](descriptionImg/edit.png)
 ### 2.2 Đăng nhập cho quản trị viên
 Sử dụng SQL để lưu trữ thông tin (user, password) của quản trị viên
 
 ### 2.3 Quản trị viên có quyền tải lên file model 3D
 Sau khi đăng nhập thành công, quản trị viên có thể tải lên file model 3D và chỉ có thể tải file dạng .glb
+![Login](descriptionImg/login.png)
+![Upload](descriptionImg/upload.png)
