@@ -1,4 +1,8 @@
-
+body{
+  background-image: url("/homeBG.png");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 .container.main {
     margin-top: 50px;
   }
@@ -18,7 +22,7 @@
     justify-content: center;
 }
 .upload-file {
-  background-color: #ffffff;
+  background-color:#ffffff;
   width: 600px;
   margin: auto;
   padding: 20px;
